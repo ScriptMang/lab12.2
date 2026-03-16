@@ -5,7 +5,7 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
-    res.send("Welcome to the Homepage.")
+    res.send("Welcome to the Homepage.");
 })
 
 app.get('/api/fun-facts', async(req, res)=>{
@@ -15,10 +15,10 @@ app.get('/api/fun-facts', async(req, res)=>{
         res.json(randomFact);
     } catch(err) {
         console.error('Failed to fetch fun fact:', err.message);
-        res.status(500).json({"error": "Could not fetch fun fact"})
+        res.status(500).json({"error": "Could not fetch fun fact"});
     }
 })
 
 app.listen(port, ()=>{
-    console.log(`Server listening on http://localhost:${port}`)
+    console.log(`Server listening on http://localhost:${port}`);
 })
