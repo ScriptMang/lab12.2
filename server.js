@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 
 app.get('/api/fun-facts', async(req, res)=>{
     try { 
-        const apiResponse = await axios.get('https://uselessfacts.jsph.pl/api/v2/facts/rando');
+        const apiResponse = await axios.get('https://uselessfacts.jsph.pl/api/v2/facts/random');
         res.json(apiResponse.data);
     } catch(err) {
         console.error('Failed to fetch fun fact:', err.message);
